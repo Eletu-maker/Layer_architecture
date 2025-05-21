@@ -1,29 +1,28 @@
 package data.models;
 
 import data.repository.Residents;
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ResidentsTest {
-    //Residents residents;
-/*
+
+    private Residents residents;
+
     @BeforeEach
-    public void setUp(){
+    void setUp() {
         residents = new Residents();
-    }
-
- */
-    @Test
-    public void testThatResidentIsZero(){
-        Residents residents =  new Residents();
-        assertEquals(0,residents.count());
+        Residents.reset();
     }
 
     @Test
-    public void testThatResidentIsOneCount(){
+    void testThatResidentIsZero() {
+        assertEquals(0, residents.count());
+    }
+
+    @Test
+    public void testThatResidentIsTwoCount(){
         Residents residents =  new Residents();
         Resident resident = new Resident();
         residents.save(resident);
@@ -108,6 +107,7 @@ public class ResidentsTest {
 
 
     }
+
 
 
 

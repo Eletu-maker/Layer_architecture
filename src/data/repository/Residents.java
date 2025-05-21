@@ -10,6 +10,11 @@ public class Residents implements ResidentsRepository{
     private static List<Resident> residents = new ArrayList<>();
     private static int currentId =0;
 
+    public static void reset(){
+        residents.clear();
+        currentId = 0;
+    }
+
     @Override
     public List<Resident> getResidents() {
         return residents;
