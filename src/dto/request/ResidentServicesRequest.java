@@ -26,7 +26,6 @@ public class ResidentServicesRequest {
     public String getEmail() {
         return Email;
     }
-
     public void setEmail(String email) {
         Email = email;
     }
